@@ -14,8 +14,16 @@
 创建好后编辑user环境，添加两个变量TY_USER_NAME 是你的天翼网盘账号，TY_PASSWORD 是的你密码。现已支持多账户,最多可添加5个账户，第二个账户用户名变量是TY_USER_NAME1，密码变量是TY_PASSWORD1,以此类推，最多到TY_USER_NAME4,TY_PASSWORD4。
 ![](https://cdn.jsdelivr.net/gh/wes-lin/Cloud189Checkin/image/account.jpg)
 ### 设置推送
-为了考虑到不同客户端兼容性,采用了Server酱,只需多配置下SENKEY
-![](https://cdn.jsdelivr.net/gh/wes-lin/Cloud189Checkin/image/push.png)就行,Server酱的配置和senkey的获取可参看[Server酱官网](https://sct.ftqq.com/)
+#### Server酱
+为了考虑到不同客户端兼容性,采用了Server酱,只需多配置下SENDKEY
+![](https://cdn.jsdelivr.net/gh/wes-lin/Cloud189Checkin/image/push.png)就行,Server酱的配置和sendkey的获取可参看[Server酱官网](https://sct.ftqq.com/)
+#### TelegramBot推送
+- `TELEGRAM_BOT_TOKEN` *Telegram Bot Token*
+- `TELEGRAM_CHAT_ID` *Telegram 接收推送消息的会话 ID*
+#### 微信群机器人推送
+- `WECOM_BOT_KEY ` *微信群机器人webhook*
+- `WECOM_BOT_TELPHONE ` *接收推送手机号*
+[群机器人配置说明](https://developer.work.weixin.qq.com/document/path/91770)
 ### 执行任务
 1. 点击**Action**，再点击**I understand my workflows, go ahead and enable them**  
 2. 给自己仓库点个start或者修改任意文件后提交一次  
@@ -73,7 +81,10 @@ npm start
 ```
 
 ## 更新内容
-
+### 2023-11-26
+[支持微信群机器人推送](https://github.com/wes-lin/Cloud189Checkin/pull/26)
+### 2023-08-14
+[支持Telegram推送](https://github.com/wes-lin/Cloud189Checkin/pull/18)
 ### 2023-06-09
 [添加错误重试](https://github.com/wes-lin/Cloud189Checkin/issues/14)
 ### 2023-06-05
